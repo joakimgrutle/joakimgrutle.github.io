@@ -1,0 +1,61 @@
+#head-wrapper {
+  width: 100%;
+}
+
+#content {
+  display: flex;
+  flex-direction: column;
+}
+
+.center {
+  display: block;
+  margin-right: auto;
+  margin-left: auto;
+}
+
+img {
+  object-fit: cover;
+  margin-top: 50px;
+  height: 400px;
+  width: 100%
+}
+
+.index-content {
+  /* Hvit tekst med svart outline og gjennomsiktig svart bakgrunn */
+  margin-top: -8px;
+  width: 100%;
+  background: rgba(0, 0, 0, 0.7);
+  color: white;
+  text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000;
+  font-family: "Trebuchet MS";
+}
+
+.index-content h4 {
+  margin-top: 0px;
+  text-align: center;
+  font-size: 1.875em;
+}
+
+.index-content p {
+  font-size: 1em;
+  padding-left: 15px;
+  padding-right: 15px;
+}
+
+@media (max-width: 675px) {
+  .index-content h4 {
+    font-size: 1.5625em;
+  }
+  .index-content p {
+    font-size: 0.75em;
+  }
+}
+
+@media (max-width: 900px) {
+  .index-content h4 {
+    font-size: 1.5625em;
+  }
+  .index-content p {
+    font-size: 0.75em;
+  }
+}

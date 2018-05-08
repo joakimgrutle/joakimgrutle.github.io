@@ -1,0 +1,69 @@
+#content {
+    margin-top: 160px;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+
+#content h3 {
+    color: white;
+}
+
+#favoriteBox {
+    width: 49.5%;
+    border: solid 2px white;
+}
+
+#closestBox {
+    width: 49.5%;
+    border: solid 2px white;
+    border-left: none;
+}
+
+#closestBox table {
+    width: 100%;
+}
+
+#favoriteBox select,
+#closestTable {
+    margin-bottom: 50px;
+}
+
+#closestBox h3,
+#closestBox ol,
+#favoriteBox h3,
+#favoriteBox select {
+    margin-left: 20px;
+}
+
+th,
+td {
+    width: 25%;
+    padding: 5px;
+    border: solid 1px white;
+    color: white;
+}
+
+@media only screen and (min-device-width: 360px) and (max-device-width: 740px) {
+    #content {
+        margin-top: 450px;
+        flex-direction: column;
+    }
+    #favoriteBox {
+        width: 100%;
+    }
+    #closestBox {
+        width: 100%;
+        border-left: solid 2px white;
+    }
+    select {
+        font-size: 1.5em;
+    }
+    h3 {
+        font-size: 2em;
+    }
+    td,
+    th {
+        font-size: 1.8em;
+    }
+}

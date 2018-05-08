@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="nb">
+
+<head>
+  <title>Min Favorittlekeplass</title>
+  <meta charset="utf-8" />
+  <link rel="stylesheet" href="css/common.css" type="text/css" />
+  <link rel="stylesheet" href="css/favorite.css" type="text/css" />
+  <script src="js/commonFunctions.js"></script>
+  <script src="js/favorite.js"></script>
+</head>
+
+<body onload="scan('https://hotell.difi.no/api/json/bergen/lekeplasser?', 'favorite');">
+  <div id="head-wrapper">
+    <div class="header-container">
+      <h1 class="centerText" onclick="location.href='index.html'">Min Favorittlekeplass</h1>
+    </div>
+    <nav class="menu">
+      <ul>
+        <li>
+          <a href="index.html"> Hjemmeside </a>
+        </li>
+        <li>
+          <a href="activities.html">
+            Aktiviteter
+          </a>
+        </li>
+        <li>
+          <a href="toilet.html"> Toaletter </a>
+        </li>
+        <li>
+          <a href="playground.html">
+            Lekeplasser
+          </a>
+        </li>
+        <li>
+          <a href="favoritePlayground.html">
+            Favorittlekeplass
+          </a>
+        </li>
+        <li>
+          <a href="weatherdata.html">
+            Værvarsel
+          </a>
+        </li>
+      </ul>
+    </nav>
+  </div>
+  <div id="content">
+    <div id="favoriteBox">
+      <h3>Velg favorittlekeplass</h3>
+      <select id="favorite" name="favorite" onchange="findChosen()">
+        <option disabled selected value>Velg lekeplass</option>
+      </select>
+    </div>
+    <div id="closestBox">
+      <h3>Nærmeste toalett</h3>
+      <table>
+        <thead>
+          <tr>
+            <td>Toalett</td>
+            <td>Avstand i meter</td>
+          </tr>
+        </thead>
+        <tbody id="closestTable"></tbody>
+      </table>
+      <div id="errorMsg"></div>
+    </div>
+  </div>
+</body>
+
+</html>

@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="nb">
+
+<head>
+  <title>Lekeplasser i Bergen</title>
+  <meta charset="utf-8" />
+  <link rel="stylesheet" href="css/common.css" type="text/css" />
+  <link rel="stylesheet" href="css/toilet.css" type="text/css" />
+  <script src="js/commonFunctions.js"></script>
+  <script src="js/playground.js"></script>
+  <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBxV8dHcnjxe9dmWL-36hwvo0pX7OHcWLg&callback=initMap">
+  </script>
+</head>
+
+<body onload="scan('https://hotell.difi.no/api/json/bergen/lekeplasser?', 'playground');">
+  <div id="head-wrapper">
+    <div class="header-container">
+      <h1 class="centerText" onclick="location.href='index.html'">Lekeplasser i Bergen</h1>
+    </div>
+    <nav class="menu">
+      <ul>
+        <li>
+          <a href="index.html"> Hjemmeside </a>
+        </li>
+        <li>
+          <a href="activities.html">
+            Aktiviteter
+          </a>
+        </li>
+        <li>
+          <a href="toilet.html"> Toaletter </a>
+        </li>
+        <li>
+          <a href="playground.html">
+            Lekeplasser
+          </a>
+        </li>
+        <li>
+          <a href="favoritePlayground.html">
+            Favorittlekeplass
+          </a>
+        </li>
+        <li>
+          <a href="weatherdata.html">
+            Værvarsel
+          </a>
+        </li>
+      </ul>
+    </nav>
+  </div>
+  <div id="content">
+    <div id="map"></div>
+    <div id="searchBox">
+      <h3>Lekeplasser i Bergen</h3>
+      <div id="lekeplasser">
+        <ol id="list"></ol>
+      </div>
+      <div id="errorMsg"></div>
+    </div>
+  </div>
+</body>
+
+</html>

@@ -1,0 +1,129 @@
+@font-face {
+  font-family: "sofia";
+  src: url("../font/Sofia-Regular.ttf");
+}
+
+body {
+  background: #303030;
+  display: flex;
+  flex-direction: column;
+}
+
+.menu {
+  transform: skewY(-1deg);
+  transform-origin: 0;
+  overflow: hidden;
+  background-color: black;
+  top: 88px;
+  left: 0px;
+  width: 100%;
+  position: fixed;
+  border-bottom: 2px solid;
+  height: auto;
+}
+
+.menu ul {
+  display: flex;
+  flex-direction: row;
+  list-style: none;
+  width: 100%;
+  background-color: #444;
+  padding: 0;
+  margin: 0;
+}
+
+.menu li {
+  width: 33.33%;
+  border: 1px solid;
+  background-color: #424bf4;
+  border-bottom-color: black;
+}
+
+.menu a {
+  display: block;
+  height: 50px;
+  cursor: pointer;
+  outline: none;
+  color: #fff;
+  text-align: center;
+  line-height: 50px;
+  background-color: #424bf4;
+  box-shadow: 0 9px #999;
+  font-family: "Trebuchet MS";
+  text-decoration: none;
+}
+
+.menu a:hover {
+  background-color: #252b96
+}
+
+.menu a:active {
+  background-color: #252b96;
+  box-shadow: 0 5px #666;
+  transform: translateY(1px);
+}
+
+.centerText {
+  text-align: center;
+  font-family: "sofia";
+}
+
+.centerText:hover {
+  cursor: pointer;
+}
+
+.header-container {
+  color: #DFE2DB;
+  width: 100%;
+  position: fixed;
+  top: 0px;
+  left: 0px;
+  background: linear-gradient(125deg, #191919, #424bf4);
+  display: inline-block;
+  transform: skewY(-1deg);
+  transform-origin: 0;
+}
+
+#errorMsg h3 {
+  width: 100%;
+}
+
+@media (max-width: 600px) {
+  .menu {
+    height: auto;
+  }
+  .menu a {
+    font-size: 0.6875em;
+    padding: 16px 25px;
+  }
+}
+
+@media only screen and (min-device-width: 360px) and (max-device-width: 740px) {
+  .header-container {
+    height: auto;
+    padding-bottom: 40px;
+  }
+  .header-container h1 {
+    font-size: 2.5em;
+  }
+  .menu {
+    height: auto;
+    margin-top: 20px;
+    margin-bottom: 20px;
+  }
+  .menu ul {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
+  .menu li {
+    width: 49.7%;
+  }
+  .menu a {
+    font-size: 1.75em;
+    padding: 25px 25px;
+  }
+  #content {
+    margin-top: 250px;
+  }
+}

@@ -1,0 +1,59 @@
+#forecast {
+  margin-top: 150px;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  color: white;
+  margin-right: 30%;
+}
+
+#info {
+  margin-top: 50px;
+  font-size: 15px;
+  color: white;
+  text-align: center;
+}
+
+a {
+  color: white;
+  font-size: 15px;
+}
+
+td,
+th {
+  width: 25%;
+  padding: 5px;
+  border: solid 1px white;
+}
+
+select {
+  padding: 5px;
+  width: 20%;
+}
+
+input[type="text"] {
+  font-size: 1.08em;
+  width: 20%;
+  float: none;
+}
+
+@media only screen and (min-device-width: 360px) and (max-device-width: 740px) {
+  #forecast {
+    margin-top: 450px;
+  }
+  td,
+  th {
+    font-size: 1.8em;
+  }
+  input[type="text"] {
+    font-size: 1.8em;
+    width: 25%;
+    float: none;
+  }
+  select {
+    font-size: 1.5em;
+  }
+  h3 {
+    font-size: 2em;
+  }
+}

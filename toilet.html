@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="nb">
+
+<head>
+  <title>Toaletter i Bergen</title>
+  <meta charset="utf-8" />
+  <link rel="stylesheet" href="css/common.css" type="text/css" />
+  <link rel="stylesheet" href="css/toilet.css" type="text/css" />
+  <script src="js/commonFunctions.js"></script>
+  <script src="js/toilet.js"></script>
+  <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBxV8dHcnjxe9dmWL-36hwvo0pX7OHcWLg&callback=initMap">
+  </script>
+</head>
+
+<body onload="scan('https://hotell.difi.no/api/json/bergen/dokart?', 'toilets')">
+  <div id="head-wrapper">
+    <div class="header-container">
+      <h1 class="centerText" onclick="location.href='index.html'">Toaletter i Bergen</h1>
+    </div>
+    <nav class="menu">
+      <ul>
+        <li>
+          <a href="index.html"> Hjemmeside </a>
+        </li>
+        <li>
+          <a href="activities.html">
+            Aktiviteter
+          </a>
+        </li>
+        <li>
+          <a href="toilet.html"> Toaletter </a>
+        </li>
+        <li>
+          <a href="playground.html">
+            Lekeplasser
+          </a>
+        </li>
+        <li>
+          <a href="favoritePlayground.html">
+            Favorittlekeplass
+          </a>
+        </li>
+        <li>
+          <a href="weatherdata.html">
+            Værvarsel
+          </a>
+        </li>
+      </ul>
+    </nav>
+  </div>
+  <div id="content">
+    <div id="map"></div>
+    <div id="searchBox">
+      <h3>Toaletter i Bergen</h3>
+      <div id="search">
+        <form id="searchToilets">
+          <input type="text" name="freeSearch" placeholder="Søk adresse eller navn..." />
+          <button type="submit">Søk</button>
+          <br/>
+          <p onclick="hideShowAdvSearch()">Avansert søk</p>
+          <div id="advancedSearch" style="display:none">
+            <div id="advSearchForm">
+              <span class="inpGroup">
+                <label>Kjønn:</label>
+                <select name="kjonn">
+                  <option disabled selected value> Velg kjønn</option>
+                  <option value="herre">Herre</option>
+                  <option value="kvinne">Kvinne</option>
+                </select>
+              </span>
+              <span class="inpGroup">
+                <label>Rullestol:</label>
+                <input type="checkbox" name="rullestol">
+              </span>
+              <span class="inpGroup">
+                <label>Åpen nå:</label>
+                <input type="checkbox" name="aapenNaa">
+              </span>
+              <span class="inpGroup">
+                <label>Stellerom:</label>
+                <input type="checkbox" name="stellerom">
+              </span>
+              <span class="inpGroup">
+                <label>Gratis:</label>
+                <input type="checkbox" name="gratis">
+              </span>
+              <span class="inpGroup">
+                <input type="text" name="aapen" placeholder="Åpen klokken...">
+              </span>
+              <span class="inpGroup">
+                <input type="text" name="maksPris" placeholder="Maks pris...">
+              </span>
+            </div>
+          </div>
+        </form>
+      </div>
+      <div id="toilets">
+        <ol id="list"></ol>
+      </div>
+      <div id="errorMsg"></div>
+    </div>
+  </div>
+</body>
+
+</html>
